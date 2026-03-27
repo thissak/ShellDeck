@@ -80,8 +80,15 @@ struct HostFormView: View {
                     }
                 }
 
-                Section("Options") {
+                Section {
                     Toggle("Use Mosh", isOn: $useMosh)
+                    if useMosh {
+                        Label("Requires mosh-server on remote host and UDP ports 60000-61000 open. Falls back to SSH if unavailable.", systemImage: "info.circle")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                } header: {
+                    Text("Options")
                 }
             }
             .navigationTitle("Add Host")

@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000D7EC20F227EACBAA3DF48 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 13136251A5254C2B543F5043 /* libc++.tbd */; };
+		0677BFBAC84DC57CA74B70B2 /* mosh.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9936A59245EA9CDE038EA30 /* mosh.xcframework */; };
+		11CD4BEE0B8A26CB0DCA71AC /* SSHConfigParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0A5EB099064589745F6AE /* SSHConfigParser.swift */; };
+		1722FBFD7200E700F3DF0A92 /* HostKeyServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AA05E23853EE9528A22B20 /* HostKeyServiceProtocol.swift */; };
+		1F48886C07E5E00D53121DE3 /* SSHKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6716E6DF3AA9F9CE7CCF475 /* SSHKey.swift */; };
+		244B6BAB102710CFC50565B4 /* MockHostStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529AB480C11B48924019DF4 /* MockHostStorage.swift */; };
+		258A33E05B4CB81E00FC8EB4 /* MockHostKeyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65BFEE05CE5F240CC676DC1 /* MockHostKeyService.swift */; };
+		27D56A6F45B0800D0CFF85C2 /* Protobuf_C_.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91F7AE7D4240B575388C6B7 /* Protobuf_C_.xcframework */; };
+		3A172A9DFD4673229E0AF339 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E8357888C5E86ECF3FA9B /* KeychainService.swift */; };
+		3EC738F48341A13ED1A3EFE7 /* HostFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F08AEBEADDCF5150BB277 /* HostFormViewModel.swift */; };
+		49E892161C258CA2A5C6A9A9 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89582DEE54EE294F86DE0087 /* DependencyContainer.swift */; };
+		4A0F694C0FF47379187E0370 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85288D707BF1D35D77E2F22B /* Host.swift */; };
+		505BCD43FACD07A70DA753A6 /* TerminalContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D86F88B41F2C17B343A3C9 /* TerminalContainerView.swift */; };
+		525B5CCAE84C1148C447581A /* TerminalRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3D10769B97838C99155FB1 /* TerminalRepresentable.swift */; };
+		57E09B96FC945F7E99CEA580 /* HostStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8798500F038DF290CD517996 /* HostStorageTests.swift */; };
+		58C8A7702E3E0707EDC5137E /* HostStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3418D54D59FC97921DC5B654 /* HostStorageProtocol.swift */; };
+		59EAA4C738661107C7D9BC4C /* SSHSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0929364012AEBAC88F66EB53 /* SSHSession.swift */; };
+		5C300D0EDD5D51EDACAE07B2 /* HostFormViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBCB14229B93E66D1452007 /* HostFormViewModelTests.swift */; };
+		5FD7C5A005652F002EDEAE5E /* SessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D432C107C6CE0FEE4582072 /* SessionProtocol.swift */; };
+		605082E27CCB42E58FA8C0F1 /* HostListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF4B2598A3BCE9C4011524 /* HostListViewModelTests.swift */; };
+		6DD37AD4799878E547BC924E /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF4A4878714C4726DF467F2 /* ConnectionState.swift */; };
+		7770C45E1D18730AF586C20C /* HostStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD0D9D83C18C54DA447D3D2 /* HostStorage.swift */; };
+		786262449405768055247762 /* Protobuf_C_.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E91F7AE7D4240B575388C6B7 /* Protobuf_C_.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		78F5BA938534677C3ACE7C3C /* TerminalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F1BD06BF51CE9BB5ED4262 /* TerminalViewModel.swift */; };
+		7961EB13BE25A5B974430B43 /* SSHConfigParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8B9CD32E715134E97FEBC4 /* SSHConfigParserTests.swift */; };
+		86F80C47E3C66F292EA4F9F1 /* mosh.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9936A59245EA9CDE038EA30 /* mosh.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8B87A539368B3861E6F30C42 /* HostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290C1FE611C2BB3783502702 /* HostListViewModel.swift */; };
+		8BAEF638DAAE7DC23B5423C5 /* MoshSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C847AB7434A6D0DEB511B0 /* MoshSession.swift */; };
+		8D218FFB8CFCDA5E61C97BE5 /* MoshBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7541148E0803AF8E39B0DD2B /* MoshBootstrap.swift */; };
+		8E85C490F95FAAF39A89E0B8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A713D2A2439B9F724384C48E /* libresolv.tbd */; };
+		934A9135EDB95E11177A606A /* SFTPItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7501562A0F56D800AB47A3C /* SFTPItem.swift */; };
+		9645675342CE60AE69EB63BF /* SSHSessionIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B25B3ACB3301B3BA599041 /* SSHSessionIntegrationTests.swift */; };
+		9D59EB0460F48375D2E345E3 /* OpenSSHKeyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAEB836A6440C85EA0CC616 /* OpenSSHKeyParser.swift */; };
+		9E9C06F110A973F74C04742F /* ModelCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B280AF66D8DE5228EA99139 /* ModelCodingTests.swift */; };
+		9F5AD67DCA6E4B7FB0A54CFB /* TerminalViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D68DD1E9204FD3A18A5D23 /* TerminalViewModelTests.swift */; };
+		A1CA02F28F2F3F9E53E6ABBB /* Citadel in Frameworks */ = {isa = PBXBuildFile; productRef = 4123F56C66F171C3E9EDB168 /* Citadel */; };
+		AD99A7518C15B4F3E997E026 /* HostKeyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EEDC8F44DB334610975959 /* HostKeyServiceTests.swift */; };
+		B16A1CB133F38D4298526BF3 /* MockKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14670EF0930C5664DDCF991 /* MockKeychainService.swift */; };
+		B879F70ADF4105D552D6353E /* HostFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C0FCB477841580ABEC28FD /* HostFormView.swift */; };
+		C3FC112F3A88BD2A7AEC3F56 /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BBED47B83D37527E5886F2 /* MockSession.swift */; };
+		C547670CF09DE23774D65DA3 /* KeychainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052CFEAC8C5CC02EF8A06C69 /* KeychainServiceTests.swift */; };
+		CA0DF84F5D20BA3E36D5E7FA /* SSHConfigParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56D369EF71003AA976ECFC /* SSHConfigParserProtocol.swift */; };
+		CACAAF038E97CC07F1805A9C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F936444718202C96266346 /* libz.tbd */; };
+		CE4B0A25B47A3CD2D4EB73F3 /* ShellDeckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA62D60A3DCF5374DA8C53E /* ShellDeckApp.swift */; };
+		D757D62B9C27DBEB4B2F8BA5 /* MockSSHConfigParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C2223AB20201082A7507E /* MockSSHConfigParser.swift */; };
+		DFB85B30CEEB83872305640C /* KnownHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B997FA236A7FDF6D651024B2 /* KnownHost.swift */; };
+		E0996E9B3F9E47FB3B34B5ED /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 66B554ADD4F7D1CA587EDC5A /* SwiftTerm */; };
+		E2BC1DBA04786C18F9241058 /* HostKeyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312566BC6EF7FDEECDC7BFF /* HostKeyService.swift */; };
+		E545282B799AFD360C3058C4 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 357A0FBF1F0F0D15FA5CC2B5 /* KeychainAccess */; };
+		EDFD1EE6310C8A500FD6490D /* MoshBootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973741CAF77B6025D2ED9218 /* MoshBootstrapTests.swift */; };
+		FE83DBFF2E4B76F880089B4B /* KeychainServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C918C8A332C9B296525375 /* KeychainServiceProtocol.swift */; };
+		FEF28512165D435BB207FC68 /* HostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00985F0B1B8ED4CDC3FFB1E /* HostListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2F62C2B81F556E8E32B143A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3925D9CA0204F4B8E932679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8EA9F82B127220B1761227E;
+			remoteInfo = ShellDeck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45EAE8DFE36EEF69EEE565E5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				86F80C47E3C66F292EA4F9F1 /* mosh.xcframework in Embed Frameworks */,
+				786262449405768055247762 /* Protobuf_C_.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		052CFEAC8C5CC02EF8A06C69 /* KeychainServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceTests.swift; sourceTree = "<group>"; };
+		0929364012AEBAC88F66EB53 /* SSHSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHSession.swift; sourceTree = "<group>"; };
+		0D432C107C6CE0FEE4582072 /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
+		13136251A5254C2B543F5043 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		18ADF102337B3541270AFD96 /* ShellDeckTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ShellDeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C0FCB477841580ABEC28FD /* HostFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostFormView.swift; sourceTree = "<group>"; };
+		2183E955EAEAF85D2A886D10 /* ShellDeck.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ShellDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C847AB7434A6D0DEB511B0 /* MoshSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoshSession.swift; sourceTree = "<group>"; };
+		25E0A5EB099064589745F6AE /* SSHConfigParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHConfigParser.swift; sourceTree = "<group>"; };
+		28EEDC8F44DB334610975959 /* HostKeyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostKeyServiceTests.swift; sourceTree = "<group>"; };
+		290C1FE611C2BB3783502702 /* HostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostListViewModel.swift; sourceTree = "<group>"; };
+		3418D54D59FC97921DC5B654 /* HostStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStorageProtocol.swift; sourceTree = "<group>"; };
+		4C4C2223AB20201082A7507E /* MockSSHConfigParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSSHConfigParser.swift; sourceTree = "<group>"; };
+		5B5790767A57BC434881BE8B /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		5C56D369EF71003AA976ECFC /* SSHConfigParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHConfigParserProtocol.swift; sourceTree = "<group>"; };
+		5EBCB14229B93E66D1452007 /* HostFormViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostFormViewModelTests.swift; sourceTree = "<group>"; };
+		63C918C8A332C9B296525375 /* KeychainServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceProtocol.swift; sourceTree = "<group>"; };
+		67BBED47B83D37527E5886F2 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
+		68F936444718202C96266346 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		72B25B3ACB3301B3BA599041 /* SSHSessionIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHSessionIntegrationTests.swift; sourceTree = "<group>"; };
+		74D86F88B41F2C17B343A3C9 /* TerminalContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalContainerView.swift; sourceTree = "<group>"; };
+		7541148E0803AF8E39B0DD2B /* MoshBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoshBootstrap.swift; sourceTree = "<group>"; };
+		7F1F08AEBEADDCF5150BB277 /* HostFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostFormViewModel.swift; sourceTree = "<group>"; };
+		8312566BC6EF7FDEECDC7BFF /* HostKeyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostKeyService.swift; sourceTree = "<group>"; };
+		83F1BD06BF51CE9BB5ED4262 /* TerminalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalViewModel.swift; sourceTree = "<group>"; };
+		85288D707BF1D35D77E2F22B /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		8798500F038DF290CD517996 /* HostStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStorageTests.swift; sourceTree = "<group>"; };
+		89582DEE54EE294F86DE0087 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		8B280AF66D8DE5228EA99139 /* ModelCodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCodingTests.swift; sourceTree = "<group>"; };
+		973741CAF77B6025D2ED9218 /* MoshBootstrapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoshBootstrapTests.swift; sourceTree = "<group>"; };
+		97D68DD1E9204FD3A18A5D23 /* TerminalViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalViewModelTests.swift; sourceTree = "<group>"; };
+		9B3D10769B97838C99155FB1 /* TerminalRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalRepresentable.swift; sourceTree = "<group>"; };
+		A529AB480C11B48924019DF4 /* MockHostStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHostStorage.swift; sourceTree = "<group>"; };
+		A713D2A2439B9F724384C48E /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		A7501562A0F56D800AB47A3C /* SFTPItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTPItem.swift; sourceTree = "<group>"; };
+		B3AA05E23853EE9528A22B20 /* HostKeyServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostKeyServiceProtocol.swift; sourceTree = "<group>"; };
+		B997FA236A7FDF6D651024B2 /* KnownHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownHost.swift; sourceTree = "<group>"; };
+		BAF4A4878714C4726DF467F2 /* ConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionState.swift; sourceTree = "<group>"; };
+		BBD0D9D83C18C54DA447D3D2 /* HostStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostStorage.swift; sourceTree = "<group>"; };
+		C2DF4B2598A3BCE9C4011524 /* HostListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostListViewModelTests.swift; sourceTree = "<group>"; };
+		CB5E8357888C5E86ECF3FA9B /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		CEAEB836A6440C85EA0CC616 /* OpenSSHKeyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSSHKeyParser.swift; sourceTree = "<group>"; };
+		D65BFEE05CE5F240CC676DC1 /* MockHostKeyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHostKeyService.swift; sourceTree = "<group>"; };
+		D6716E6DF3AA9F9CE7CCF475 /* SSHKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHKey.swift; sourceTree = "<group>"; };
+		E00985F0B1B8ED4CDC3FFB1E /* HostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostListView.swift; sourceTree = "<group>"; };
+		E14670EF0930C5664DDCF991 /* MockKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeychainService.swift; sourceTree = "<group>"; };
+		E91F7AE7D4240B575388C6B7 /* Protobuf_C_.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Protobuf_C_.xcframework; path = Frameworks/Protobuf_C_.xcframework; sourceTree = "<group>"; };
+		E9936A59245EA9CDE038EA30 /* mosh.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = mosh.xcframework; path = Frameworks/mosh.xcframework; sourceTree = "<group>"; };
+		EEA62D60A3DCF5374DA8C53E /* ShellDeckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellDeckApp.swift; sourceTree = "<group>"; };
+		FC8B9CD32E715134E97FEBC4 /* SSHConfigParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHConfigParserTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84D13F23D8CC3E19E4B53A3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1CA02F28F2F3F9E53E6ABBB /* Citadel in Frameworks */,
+				E0996E9B3F9E47FB3B34B5ED /* SwiftTerm in Frameworks */,
+				E545282B799AFD360C3058C4 /* KeychainAccess in Frameworks */,
+				0677BFBAC84DC57CA74B70B2 /* mosh.xcframework in Frameworks */,
+				27D56A6F45B0800D0CFF85C2 /* Protobuf_C_.xcframework in Frameworks */,
+				CACAAF038E97CC07F1805A9C /* libz.tbd in Frameworks */,
+				000D7EC20F227EACBAA3DF48 /* libc++.tbd in Frameworks */,
+				8E85C490F95FAAF39A89E0B8 /* libresolv.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		009D913763BE181D88E80393 /* ShellDeck */ = {
+			isa = PBXGroup;
+			children = (
+				5B5790767A57BC434881BE8B /* BridgingHeader.h */,
+				F364D0CC202E46C6D8EE2137 /* App */,
+				7883D5BD47396EF51A50FA2C /* Models */,
+				3826881B1F15EAB69E06D0C5 /* Protocols */,
+				6C24DE0D58F54EDBBB833196 /* Services */,
+				35BAE97D8928A1024EC44768 /* ViewModels */,
+				B9F65EDDD4EEE50BBCE4849D /* Views */,
+			);
+			path = ShellDeck;
+			sourceTree = "<group>";
+		};
+		35BAE97D8928A1024EC44768 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7F1F08AEBEADDCF5150BB277 /* HostFormViewModel.swift */,
+				290C1FE611C2BB3783502702 /* HostListViewModel.swift */,
+				83F1BD06BF51CE9BB5ED4262 /* TerminalViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3826881B1F15EAB69E06D0C5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B3AA05E23853EE9528A22B20 /* HostKeyServiceProtocol.swift */,
+				3418D54D59FC97921DC5B654 /* HostStorageProtocol.swift */,
+				63C918C8A332C9B296525375 /* KeychainServiceProtocol.swift */,
+				0D432C107C6CE0FEE4582072 /* SessionProtocol.swift */,
+				5C56D369EF71003AA976ECFC /* SSHConfigParserProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		403AF081F2FA68CEAABF1DA4 /* HostForm */ = {
+			isa = PBXGroup;
+			children = (
+				20C0FCB477841580ABEC28FD /* HostFormView.swift */,
+			);
+			path = HostForm;
+			sourceTree = "<group>";
+		};
+		4125BEBB84C038E3D25817C4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D65BFEE05CE5F240CC676DC1 /* MockHostKeyService.swift */,
+				A529AB480C11B48924019DF4 /* MockHostStorage.swift */,
+				E14670EF0930C5664DDCF991 /* MockKeychainService.swift */,
+				67BBED47B83D37527E5886F2 /* MockSession.swift */,
+				4C4C2223AB20201082A7507E /* MockSSHConfigParser.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4D24904618D3960C402FBC53 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				28EEDC8F44DB334610975959 /* HostKeyServiceTests.swift */,
+				8798500F038DF290CD517996 /* HostStorageTests.swift */,
+				052CFEAC8C5CC02EF8A06C69 /* KeychainServiceTests.swift */,
+				973741CAF77B6025D2ED9218 /* MoshBootstrapTests.swift */,
+				FC8B9CD32E715134E97FEBC4 /* SSHConfigParserTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		547D7CE73E18791A14B70CFD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5EBCB14229B93E66D1452007 /* HostFormViewModelTests.swift */,
+				C2DF4B2598A3BCE9C4011524 /* HostListViewModelTests.swift */,
+				97D68DD1E9204FD3A18A5D23 /* TerminalViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6C24DE0D58F54EDBBB833196 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8312566BC6EF7FDEECDC7BFF /* HostKeyService.swift */,
+				BBD0D9D83C18C54DA447D3D2 /* HostStorage.swift */,
+				CB5E8357888C5E86ECF3FA9B /* KeychainService.swift */,
+				7541148E0803AF8E39B0DD2B /* MoshBootstrap.swift */,
+				24C847AB7434A6D0DEB511B0 /* MoshSession.swift */,
+				CEAEB836A6440C85EA0CC616 /* OpenSSHKeyParser.swift */,
+				25E0A5EB099064589745F6AE /* SSHConfigParser.swift */,
+				0929364012AEBAC88F66EB53 /* SSHSession.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7409FD8740C07C3D9D0C4709 = {
+			isa = PBXGroup;
+			children = (
+				009D913763BE181D88E80393 /* ShellDeck */,
+				9CB851F633679369A8507D6B /* ShellDeckTests */,
+				B35477B94DF5B2817C48EC5E /* Frameworks */,
+				DE918CC26E31C22854DD0157 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7883D5BD47396EF51A50FA2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAF4A4878714C4726DF467F2 /* ConnectionState.swift */,
+				85288D707BF1D35D77E2F22B /* Host.swift */,
+				B997FA236A7FDF6D651024B2 /* KnownHost.swift */,
+				A7501562A0F56D800AB47A3C /* SFTPItem.swift */,
+				D6716E6DF3AA9F9CE7CCF475 /* SSHKey.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85E0D06EAA61CE530F51C322 /* Terminal */ = {
+			isa = PBXGroup;
+			children = (
+				74D86F88B41F2C17B343A3C9 /* TerminalContainerView.swift */,
+				9B3D10769B97838C99155FB1 /* TerminalRepresentable.swift */,
+			);
+			path = Terminal;
+			sourceTree = "<group>";
+		};
+		9CB851F633679369A8507D6B /* ShellDeckTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1DE9087F7449B3167B8DAF4 /* Integration */,
+				4125BEBB84C038E3D25817C4 /* Mocks */,
+				D23215F3B9E32A8B5EBDC228 /* Models */,
+				4D24904618D3960C402FBC53 /* Services */,
+				547D7CE73E18791A14B70CFD /* ViewModels */,
+			);
+			path = ShellDeckTests;
+			sourceTree = "<group>";
+		};
+		B1CC3957F8A53A74EAB1BFAA /* HostList */ = {
+			isa = PBXGroup;
+			children = (
+				E00985F0B1B8ED4CDC3FFB1E /* HostListView.swift */,
+			);
+			path = HostList;
+			sourceTree = "<group>";
+		};
+		B35477B94DF5B2817C48EC5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13136251A5254C2B543F5043 /* libc++.tbd */,
+				A713D2A2439B9F724384C48E /* libresolv.tbd */,
+				68F936444718202C96266346 /* libz.tbd */,
+				E9936A59245EA9CDE038EA30 /* mosh.xcframework */,
+				E91F7AE7D4240B575388C6B7 /* Protobuf_C_.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9F65EDDD4EEE50BBCE4849D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				403AF081F2FA68CEAABF1DA4 /* HostForm */,
+				B1CC3957F8A53A74EAB1BFAA /* HostList */,
+				85E0D06EAA61CE530F51C322 /* Terminal */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D23215F3B9E32A8B5EBDC228 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B280AF66D8DE5228EA99139 /* ModelCodingTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DE918CC26E31C22854DD0157 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2183E955EAEAF85D2A886D10 /* ShellDeck.app */,
+				18ADF102337B3541270AFD96 /* ShellDeckTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1DE9087F7449B3167B8DAF4 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				72B25B3ACB3301B3BA599041 /* SSHSessionIntegrationTests.swift */,
+			);
+			path = Integration;
+			sourceTree = "<group>";
+		};
+		F364D0CC202E46C6D8EE2137 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				89582DEE54EE294F86DE0087 /* DependencyContainer.swift */,
+				EEA62D60A3DCF5374DA8C53E /* ShellDeckApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		812D9CE283823399DBE4E738 /* ShellDeckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CF8F71D31A6726AE610E36B /* Build configuration list for PBXNativeTarget "ShellDeckTests" */;
+			buildPhases = (
+				8F8287A52EC70A56944D93C5 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1230F1CC3550EC181AC626 /* PBXTargetDependency */,
+			);
+			name = ShellDeckTests;
+			packageProductDependencies = (
+			);
+			productName = ShellDeckTests;
+			productReference = 18ADF102337B3541270AFD96 /* ShellDeckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B8EA9F82B127220B1761227E /* ShellDeck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4FBADA324E44B7633B45BA9 /* Build configuration list for PBXNativeTarget "ShellDeck" */;
+			buildPhases = (
+				8A38D6C146AAA31D8F6C17BB /* Sources */,
+				84D13F23D8CC3E19E4B53A3F /* Frameworks */,
+				45EAE8DFE36EEF69EEE565E5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShellDeck;
+			packageProductDependencies = (
+				4123F56C66F171C3E9EDB168 /* Citadel */,
+				66B554ADD4F7D1CA587EDC5A /* SwiftTerm */,
+				357A0FBF1F0F0D15FA5CC2B5 /* KeychainAccess */,
+			);
+			productName = ShellDeck;
+			productReference = 2183E955EAEAF85D2A886D10 /* ShellDeck.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3925D9CA0204F4B8E932679 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = F4695631638EEEBBCCDE01D7 /* Build configuration list for PBXProject "ShellDeck" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7409FD8740C07C3D9D0C4709;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4DC6CC21B14DC1207CC65802 /* XCRemoteSwiftPackageReference "Citadel" */,
+				6FF431D566DD1799CC60A839 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				5B2F8EF21CE4A27DE682E895 /* XCRemoteSwiftPackageReference "SwiftTerm" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DE918CC26E31C22854DD0157 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8EA9F82B127220B1761227E /* ShellDeck */,
+				812D9CE283823399DBE4E738 /* ShellDeckTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A38D6C146AAA31D8F6C17BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DD37AD4799878E547BC924E /* ConnectionState.swift in Sources */,
+				49E892161C258CA2A5C6A9A9 /* DependencyContainer.swift in Sources */,
+				4A0F694C0FF47379187E0370 /* Host.swift in Sources */,
+				B879F70ADF4105D552D6353E /* HostFormView.swift in Sources */,
+				3EC738F48341A13ED1A3EFE7 /* HostFormViewModel.swift in Sources */,
+				E2BC1DBA04786C18F9241058 /* HostKeyService.swift in Sources */,
+				1722FBFD7200E700F3DF0A92 /* HostKeyServiceProtocol.swift in Sources */,
+				FEF28512165D435BB207FC68 /* HostListView.swift in Sources */,
+				8B87A539368B3861E6F30C42 /* HostListViewModel.swift in Sources */,
+				7770C45E1D18730AF586C20C /* HostStorage.swift in Sources */,
+				58C8A7702E3E0707EDC5137E /* HostStorageProtocol.swift in Sources */,
+				3A172A9DFD4673229E0AF339 /* KeychainService.swift in Sources */,
+				FE83DBFF2E4B76F880089B4B /* KeychainServiceProtocol.swift in Sources */,
+				DFB85B30CEEB83872305640C /* KnownHost.swift in Sources */,
+				8D218FFB8CFCDA5E61C97BE5 /* MoshBootstrap.swift in Sources */,
+				8BAEF638DAAE7DC23B5423C5 /* MoshSession.swift in Sources */,
+				9D59EB0460F48375D2E345E3 /* OpenSSHKeyParser.swift in Sources */,
+				934A9135EDB95E11177A606A /* SFTPItem.swift in Sources */,
+				11CD4BEE0B8A26CB0DCA71AC /* SSHConfigParser.swift in Sources */,
+				CA0DF84F5D20BA3E36D5E7FA /* SSHConfigParserProtocol.swift in Sources */,
+				1F48886C07E5E00D53121DE3 /* SSHKey.swift in Sources */,
+				59EAA4C738661107C7D9BC4C /* SSHSession.swift in Sources */,
+				5FD7C5A005652F002EDEAE5E /* SessionProtocol.swift in Sources */,
+				CE4B0A25B47A3CD2D4EB73F3 /* ShellDeckApp.swift in Sources */,
+				505BCD43FACD07A70DA753A6 /* TerminalContainerView.swift in Sources */,
+				525B5CCAE84C1148C447581A /* TerminalRepresentable.swift in Sources */,
+				78F5BA938534677C3ACE7C3C /* TerminalViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F8287A52EC70A56944D93C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C300D0EDD5D51EDACAE07B2 /* HostFormViewModelTests.swift in Sources */,
+				AD99A7518C15B4F3E997E026 /* HostKeyServiceTests.swift in Sources */,
+				605082E27CCB42E58FA8C0F1 /* HostListViewModelTests.swift in Sources */,
+				57E09B96FC945F7E99CEA580 /* HostStorageTests.swift in Sources */,
+				C547670CF09DE23774D65DA3 /* KeychainServiceTests.swift in Sources */,
+				258A33E05B4CB81E00FC8EB4 /* MockHostKeyService.swift in Sources */,
+				244B6BAB102710CFC50565B4 /* MockHostStorage.swift in Sources */,
+				B16A1CB133F38D4298526BF3 /* MockKeychainService.swift in Sources */,
+				D757D62B9C27DBEB4B2F8BA5 /* MockSSHConfigParser.swift in Sources */,
+				C3FC112F3A88BD2A7AEC3F56 /* MockSession.swift in Sources */,
+				9E9C06F110A973F74C04742F /* ModelCodingTests.swift in Sources */,
+				EDFD1EE6310C8A500FD6490D /* MoshBootstrapTests.swift in Sources */,
+				7961EB13BE25A5B974430B43 /* SSHConfigParserTests.swift in Sources */,
+				9645675342CE60AE69EB63BF /* SSHSessionIntegrationTests.swift in Sources */,
+				9F5AD67DCA6E4B7FB0A54CFB /* TerminalViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F1230F1CC3550EC181AC626 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8EA9F82B127220B1761227E /* ShellDeck */;
+			targetProxy = A2F62C2B81F556E8E32B143A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		039AAFD3029BA2A02E40C423 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		27CCCF32AC8163490EBA6227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shelldeck.ShellDeckTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShellDeck.app/ShellDeck";
+			};
+			name = Debug;
+		};
+		32A2C568842ED6F7087A9559 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		915A95466CCC575979AD053D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Frameworks\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shelldeck.app;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = ShellDeck/BridgingHeader.h;
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		984B3D5198528575765E773F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Frameworks\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shelldeck.app;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = ShellDeck/BridgingHeader.h;
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ED032DFA5A89E9C0169E7E16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shelldeck.ShellDeckTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShellDeck.app/ShellDeck";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CF8F71D31A6726AE610E36B /* Build configuration list for PBXNativeTarget "ShellDeckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27CCCF32AC8163490EBA6227 /* Debug */,
+				ED032DFA5A89E9C0169E7E16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F4695631638EEEBBCCDE01D7 /* Build configuration list for PBXProject "ShellDeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				039AAFD3029BA2A02E40C423 /* Debug */,
+				32A2C568842ED6F7087A9559 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F4FBADA324E44B7633B45BA9 /* Build configuration list for PBXNativeTarget "ShellDeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				915A95466CCC575979AD053D /* Debug */,
+				984B3D5198528575765E773F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DC6CC21B14DC1207CC65802 /* XCRemoteSwiftPackageReference "Citadel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orlandos-nl/Citadel.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.0;
+			};
+		};
+		5B2F8EF21CE4A27DE682E895 /* XCRemoteSwiftPackageReference "SwiftTerm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/migueldeicaza/SwiftTerm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		6FF431D566DD1799CC60A839 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		357A0FBF1F0F0D15FA5CC2B5 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FF431D566DD1799CC60A839 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		4123F56C66F171C3E9EDB168 /* Citadel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DC6CC21B14DC1207CC65802 /* XCRemoteSwiftPackageReference "Citadel" */;
+			productName = Citadel;
+		};
+		66B554ADD4F7D1CA587EDC5A /* SwiftTerm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B2F8EF21CE4A27DE682E895 /* XCRemoteSwiftPackageReference "SwiftTerm" */;
+			productName = SwiftTerm;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D3925D9CA0204F4B8E932679 /* Project object */;
+}

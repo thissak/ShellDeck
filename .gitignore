@@ -6,3 +6,4 @@ DerivedData/
 .DS_Store
 Frameworks/*.zip
 Package.resolved
+Frameworks/
