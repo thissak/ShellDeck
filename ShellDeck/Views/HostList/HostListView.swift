@@ -4,6 +4,7 @@ struct HostListView: View {
     @State private var hosts: [SSHHost] = []
     @State private var showAddHost = false
     @State private var selectedHost: SSHHost?
+    @State private var editingHost: SSHHost?
 
     private let container = DependencyContainer.shared
 
@@ -24,6 +25,20 @@ struct HostListView: View {
                             } label: {
                                 HostRowView(host: host)
                             }
+                            .contextMenu {
+                                Button {
+                                    editingHost = host
+                                } label: {
+                                    Label("Edit", systemImage: "pencil")
+                                }
+                                Button(role: .destructive) {
+                                    if let idx = hosts.firstIndex(where: { $0.id == host.id }) {
+                                        deleteHost(at: IndexSet(integer: idx))
+                                    }
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
+                            }
                         }
                         .onDelete(perform: deleteHost)
                     }
@@ -42,6 +57,14 @@ struct HostListView: View {
             .sheet(isPresented: $showAddHost) {
                 HostFormView { newHost in
                     hosts.append(newHost)
+                    try? container.hostStorage.saveHosts(hosts)
+                }
+            }
+            .sheet(item: $editingHost) { host in
+                HostFormView(editingHost: host) { updated in
+                    if let idx = hosts.firstIndex(where: { $0.id == updated.id }) {
+                        hosts[idx] = updated
+                    }
                     try? container.hostStorage.saveHosts(hosts)
                 }
             }

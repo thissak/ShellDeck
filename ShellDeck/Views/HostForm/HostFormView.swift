@@ -17,7 +17,11 @@ struct HostFormView: View {
     @State private var useMosh = false
     @State private var showKeyPasteSheet = false
 
+    /// 편집할 기존 호스트 (nil이면 신규)
+    var editingHost: SSHHost?
     let onSave: (SSHHost) -> Void
+
+    private var isEditing: Bool { editingHost != nil }
 
     private var isValid: Bool {
         guard !hostname.isEmpty, !username.isEmpty,
@@ -91,7 +95,8 @@ struct HostFormView: View {
                     Text("Options")
                 }
             }
-            .navigationTitle("Add Host")
+            .navigationTitle(isEditing ? "Edit Host" : "Add Host")
+            .onAppear { prefillIfEditing() }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -110,9 +115,36 @@ struct HostFormView: View {
         }
     }
 
+    private func prefillIfEditing() {
+        guard let host = editingHost else { return }
+        name = host.name
+        hostname = host.hostname
+        port = String(host.port)
+        username = host.username
+        useMosh = host.useMosh
+        switch host.authMethod {
+        case .password:
+            authType = .password
+            password = (try? DependencyContainer.shared.keychainService.retrievePassword(for: host.id)) ?? ""
+        case .key(let keyId):
+            authType = .key
+            if let data = try? DependencyContainer.shared.keychainService.retrievePrivateKey(for: keyId) {
+                privateKeyText = String(data: data, encoding: .utf8) ?? ""
+            }
+        case .agent:
+            authType = .key
+        }
+    }
+
     private func save() {
         let container = DependencyContainer.shared
-        let keyId = UUID()
+
+        // 편집 시 기존 keyId 유지, 신규 시 새 keyId
+        let existingKeyId: UUID? = {
+            if case .key(let id) = editingHost?.authMethod { return id }
+            return nil
+        }()
+        let keyId = existingKeyId ?? UUID()
 
         let authMethod: SSHHost.AuthMethod
         switch authType {
@@ -123,19 +155,26 @@ struct HostFormView: View {
         }
 
         let host = SSHHost(
+            id: editingHost?.id ?? UUID(),
             name: name.isEmpty ? hostname : name,
             hostname: hostname,
             port: UInt16(port) ?? 22,
             username: username,
             authMethod: authMethod,
-            useMosh: useMosh
+            useMosh: useMosh,
+            createdAt: editingHost?.createdAt ?? Date(),
+            lastConnectedAt: editingHost?.lastConnectedAt
         )
 
         switch authType {
         case .password:
-            try? container.keychainService.storePassword(password, for: host.id)
+            if !password.isEmpty {
+                try? container.keychainService.storePassword(password, for: host.id)
+            }
         case .key:
-            try? container.keychainService.storePrivateKey(Data(privateKeyText.utf8), for: keyId)
+            if !privateKeyText.isEmpty {
+                try? container.keychainService.storePrivateKey(Data(privateKeyText.utf8), for: keyId)
+            }
         }
 
         onSave(host)
